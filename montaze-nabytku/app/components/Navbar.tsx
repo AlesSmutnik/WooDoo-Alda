@@ -1,4 +1,3 @@
-import Image from "next/image";
 import "../styles/Navbar.css"
 // SLOZKA: components/Navbar.tsx
 export default function Navbar() {
