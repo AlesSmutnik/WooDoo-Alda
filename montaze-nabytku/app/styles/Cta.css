@@ -1,0 +1,27 @@
+.cta-box{
+    width: auto;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+   
+}
+.cta-h2{
+margin-bottom: 35px;
+color: rgb(3, 131, 92);
+}
+.cta-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(206, 135, 4);
+    border-radius: 25px;
+} 
+.img-cta{
+width: 30px;
+margin-right: 10px;
+}

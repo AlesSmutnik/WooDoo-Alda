@@ -1,0 +1,31 @@
+.Contact-Box{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.imgCon{
+    margin-bottom: 5px;
+    margin-top: 25px;
+    width: 90px;
+   }
+.telP{
+    margin-top: 25px ;
+    margin-bottom: 10px;
+    color: rgb(3, 131, 92);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    font-size: 16px;
+    font-weight: 600;}
+.telNum{
+    padding: 5px ; 
+    color: rgba(2, 2, 2, 0.932);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    font-size: 15px;
+    font-weight: 600;
+}
+

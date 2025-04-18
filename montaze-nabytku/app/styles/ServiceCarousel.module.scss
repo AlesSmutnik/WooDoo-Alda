@@ -1,0 +1,202 @@
+.boxSl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.slHedBox {
+  width: 100%;
+  text-align: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/back2.jpg');
+  background-size: 100%;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slNadpis {
+  color: rgb(231, 229, 222);
+  font-size: 42px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+.slPs {
+  
+  width: 350px;
+  color: rgb(231, 222, 222);
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.allBox {
+ 
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.slBox {
+  
+  background: #797878;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.5);
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  flex: 0 0 30%; /* Zaručí, že se boxy nebudou roztahovat */
+}
+
+.slId {
+  margin-bottom: 35px;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(65, 38, 3);
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.slDes {
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.ulReset {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.slIn {
+  text-align: center;
+  font-size: 17px;
+  margin-top: 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.slPrice {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  border-bottom: 2px solid black;
+  border-bottom-left-radius: 10px;
+}
+
+.carouselWrapper {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0,0.4)), /* poloprůhledný černý gradient */
+    url('/obv3.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 15px;
+    
+   
+  width: 100%;
+  
+ 
+  padding: 3rem 4rem;
+}
+
+.swiperContainer {
+  
+  padding-bottom: 2.5rem; /* kvůli pagination */
+}
+
+.navWrapper {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.navBtn {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #5bdf0e;
+  // padding: 0.5rem 1rem;
+  // margin-left: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  top: 65%;
+  &:hover {
+    background-color: #555;
+  }
+  &::after {
+    //  display: none; // odstraní výchozí ikonu Swiperu
+    font-size: 70%;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f77206;
+  top: 70%;
+  width: auto;
+  height: auto;
+  font-size: 1.5rem;
+}
+
+/* Mobilní zobrazení jako karusel */
+@media (max-width: 768px) {
+  .boxSl {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .allBox {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+
+  .slBox {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    margin: 0 1px; /* Aby boxy měly mezeru mezi sebou */
+  }
+
+  /* Úprava pro lepší přehlednost */
+  .slHedBox {
+    width: auto;
+    height: 250px; /* Pro mobilní zobrazení, aby to nebylo příliš vysoké */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slNadpis {
+    font-size: 30px; /* Zmenšení fontu pro mobil */
+  }
+
+  .slPs {
+    font-size: 18px; /* Zmenšení textu pro mobil */
+    width: auto;
+  }
+}
