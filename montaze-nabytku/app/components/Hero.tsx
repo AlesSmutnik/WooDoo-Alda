@@ -1,4 +1,5 @@
 import "../styles/Hero.css"
+import Link from "next/link";
 
 // SLOZKA: components/Hero.tsx
 
@@ -11,9 +12,9 @@ export default function Hero() {
         <p className="Hero-des text-lg text-secondary mb-6">
           Rychle, spolehlivě a profesionálně – u vás doma nebo ve firmě.
         </p>
-        <a href="/kontakt" className="hero-btn bg-primary text-black px-6 py-2 rounded shadow">
+        <Link href="/kontakt" className="hero-btn bg-primary text-black px-6 py-2 rounded shadow">
           Kontaktujte nás
-        </a>
+        </Link>
       </section>
     );
   }

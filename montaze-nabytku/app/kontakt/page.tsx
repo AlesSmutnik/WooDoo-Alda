@@ -1,18 +1,19 @@
 import React from "react"
 import "../styles/Contact.css"
-
+import Image from "next/image"
+import Link from "next/link"
 
 export default function ContactPage() {
 return(
     <div className="Contact-Box">
         
-            <img src="/con3.png" alt="" className="imgCon" />            
+            <Image src="/con3.png" alt="" className="imgCon" width={100} height={50}  />            
             <p className="telP">Volejte nebo pište na WhatsApp</p>
-            <a href="+420774579768" className="telNum">+420 774 579 768</a>
+            <Link href="+420774579768" className="telNum">+420 774 579 768</Link>
         
-            <img src="/con1.png" alt="" className="imgCon" />
+            <Image src="/con1.png" alt="" className="imgCon" width={100} height={50}/>
             <p className="telP">Napište nám mail</p>
-            <a href="mailto:woodooalda@gmail.com?subject=Poptávka&body=Dobrý den, rád bych..." className="telNum">woodooalda@gmail.com</a>
+            <Link href="mailto:woodooalda@gmail.com?subject=Poptávka&body=Dobrý den, rád bych..." className="telNum">woodooalda@gmail.com</Link>
         
     </div>
 )
