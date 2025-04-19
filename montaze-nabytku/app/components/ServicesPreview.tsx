@@ -1,8 +1,6 @@
 // SLOZKA: components/ServicesPreview.tsx
 
 import "../styles/ServicesPreview.css";
-import Image from "next/image";
-
 
 export default function ServicesPreview() {
     return (
@@ -13,7 +11,7 @@ export default function ServicesPreview() {
 
           <div className="box-ser p-4 bg-white shadow rounded">
             <div className="backLogo">
-              <Image src="/mont1.png" alt="montaz nabytku" className="Infopng" width={100} height={50} />
+              <img src="/mont1.png" alt="montaz nabytku" className="Infopng"/>
             </div>            
             <h3 className="text-ser text-xl font-bold mb-2">Montáž nábytku</h3>
             <p>Postavíme vše od postele až po vestavěné skříně.</p>
@@ -21,7 +19,7 @@ export default function ServicesPreview() {
           
           <div className="box-ser p-4 bg-white shadow rounded">
             <div className="backLogo">
-               <Image src="/mont3.png" alt="instalace elektro" className="Infopng" width={100} height={50} />
+               <img src="/mont3.png" alt="instalace elektro" className="Infopng"/>
             </div>            
             <h3 className="text-ser text-xl font-bold mb-2">Instalace elektroniky</h3>
             <p>Zapojení osvětlení, elektro zásuvek a dalšího příslušenství.</p>
@@ -29,7 +27,7 @@ export default function ServicesPreview() {
 
           <div className="box-ser p-4 bg-white shadow rounded">
             <div className="backLogo">
-              <Image src="/mont2.png" alt="doprava" className="Infopng" width={100} height={50} />
+              <img src="/mont2.png" alt="doprava" className="Infopng"/>
             </div>            
             <h3 className="text-ser text-xl font-bold mb-2">Dovoz a odvoz nábytku</h3>
             <p>Přivezeme vámi zakoupený nábytek a odvezeme starý.</p>
