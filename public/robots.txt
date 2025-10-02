@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://woodooalda.cz
+
+# Sitemaps
 Sitemap: https://woodooalda.cz/sitemap.xml

@@ -88,22 +88,25 @@ type ServicePackage = {
 
 const ServiceCarousel: React.FC = () => {
   return (
-    <div>
-      <div className={styles.slHedBox}>
-        <h2 className={styles.slNadpis}>Ceník služeb</h2>
-        <p className={styles.slPs}>
-          Vyber si přesně ten, který nejlépe odpovídá tvým potřebám.
+    <div className="text-white">
+
+      <div className="relative flex flex-col items-center h-40 border-b border-white text-center mb-10">
+        <h2 className="text-3xl font-bold text-primary text-white mb-10">Ceník služeb</h2>
+        <p>
+          Vyberte si přesně ten, který nejlépe odpovídá Vašim potřebám.
         </p>
+        <p>Spočítejte si orientační cenu</p>
       </div>
-       <div  className={styles.carouselWrapper}>
-      <div className={styles.navWrapper}>
-        <button className={`swiper-button-prev ${styles.navBtn}`} />
-        <button className={`swiper-button-next ${styles.navBtn}`} />
+
+       <div  className="relative mb-20 flex justify-center items-center h-80">
+      <div className="">
+        <button className="swiper-button-prev border border-[#fff] bg-[#606060] rounded-md p-5 hover:bg-white"  />
+        <button className="swiper-button-next border border-[#fff] bg-[#606060] rounded-md p-5 hover:bg-white" />
       </div>
 
       <Swiper
-        spaceBetween={30}
-        slidesPerView={1.20}
+        spaceBetween={98}
+        slidesPerView={1}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -112,26 +115,27 @@ const ServiceCarousel: React.FC = () => {
         modules={[Navigation, Pagination]}
         breakpoints={{
           768: {
-            slidesPerView: 20,
+            slidesPerView: 1,
           },
           1024: {
             slidesPerView: 1,
           },
         }}
-        className={styles.swiperContainer}
+
+        className="lg:h-60 lg:w-full lg:h-auto lg:max-w-xl top-10"
       >
         {priceList.map((pkg) => (
-          <SwiperSlide key={pkg.id} className={styles.slBox}>
-            <h3 className={styles.slId}>{pkg.title}</h3>
-            <p className={styles.slDes}>{pkg.description}</p>
-            <ul className={styles.ulReset}>
+          <SwiperSlide key={pkg.id} className="flex flex-row inetms-center text-center items-center p-15 mb-10 bg-[#606060]/80 rounded-lg shadow-lg ">
+            <h3 className="text-[#7cec10] mb-4 text-xl font-bold text-shadow-lg/30">{pkg.title}</h3>
+            <p className="">{pkg.description}</p>
+            <ul className="">
               {pkg.features.map((feature, index) => (
-                <li key={index} className={styles.slIn}>
+                <li key={index} className="">
                   {feature}
                 </li>
               ))}
             </ul>
-            <p className={styles.slPrice}>💰 {pkg.price}</p>
+            <p className="mt-5">💰 {pkg.price}</p>
           </SwiperSlide>
         ))}
       </Swiper>
