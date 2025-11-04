@@ -91,10 +91,10 @@ const CalculatorPage: React.FC = () => {
     };
 
     return (
-        <div className="border-box text-white p-1 m-10 rounded-lg shadow-lg">
+        <div className="border-box text-white p-1 m-10 flex flex-col items-center border-t border-b shadow-lg">
             <h1 className="text-[#fff] text-center mb-4 text-xl font-bold text-shadow-lg/30">Kalkulace ceny montáže </h1>
             {items.map((item) => (
-                <div key={item.id} className="">
+                <div key={item.id} className="text-[#7cec10] flex flex-col items-start w-max mb-4 mx-5 px-5 ">
                     <label className="">
                         Vyberte typ nábytku
                         <select
@@ -102,7 +102,7 @@ const CalculatorPage: React.FC = () => {
                             onChange={(e) =>
                                 handleItemChange(item.id, 'selectedItem', e.target.value)
                             }
-                            className="flex flex-culumn text-white w-40 mt-2 mb-2"
+                            className="flex flex-culumn text-white w-40 mt-2 mb-2 border border-white rounded shadow-lg bg-[#606060]/80 px-2 py-1"
                         >
                             <option value="">-- Vyberte --</option>
                             {Object.keys(priceList).map((key) => (
@@ -129,18 +129,18 @@ const CalculatorPage: React.FC = () => {
             ))}
             <button
                 onClick={handleAddItem}
-                className="p-1 mb-5 border border-white text-[#ffff] bg-[#757575] text-shadow-lg/30 font-bold rounded shadow hover:bg-[#489F32] hover:text-[#0D0D0C] opacity-75 hover:scale-105 transition-all duration-300 ease-in-out hover:opacity-100"
+                className="p-1 mx-10 mb-5 border border-white text-[#7cec10] bg-[#757575] text-shadow-lg/30 font-bold rounded shadow hover:bg-[#489F32] hover:text-[#0D0D0C] opacity-75 hover:scale-105 transition-all duration-300 ease-in-out hover:opacity-100"
             >
                 Přidat další položku
             </button>
             {error && <div className="mb-5">{error}</div>}
             {!error && (
-                <div className="mb-5">
+                <div className="mb-5 mx-10 p-2 w-max" >
                     <h2>Celková cena: {totalPrice} Kč</h2>
                 </div>
             )}
-            <button>
-                <Link href="/kontakt" className="p-1 border border-white text-[#ffff] bg-[#757575] text-shadow-lg/30 font-bold rounded shadow hover:bg-[#489F32] hover:text-[#0D0D0C] opacity-75 hover:scale-105 transition-all duration-300 ease-in-out hover:opacity-100 mt-10">
+            <button className='mb-10 mx-10 p-1 border border-white text-[#7cec10] bg-[#757575] text-shadow-lg/30 font-bold rounded shadow hover:bg-[#489F32] hover:text-[#0D0D0C] opacity-75 hover:scale-105 transition-all duration-300 ease-in-out hover:opacity-100'>
+                <Link href="/kontakt" className="">
                     Odeslat poptávku
                 </Link>
             </button>

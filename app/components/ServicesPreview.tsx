@@ -1,6 +1,5 @@
 // SLOZKA: components/ServicesPreview.tsx
 
-import { div, section } from "framer-motion/client";
 import "../styles/ServicesPreview.css";
 
 export default function ServicesPreview() {
